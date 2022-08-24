@@ -32,7 +32,7 @@ export class TodoFooterComponent implements OnInit {
   }
 
   filtrar(filtro: actions.filtrosValidos){
-    this.store.dispatch( actions.setFiltro({filtro}) );
+    this.store.dispatch( actions.setFiltro({ filtro }) );
   }
 
   clearCompleted(){

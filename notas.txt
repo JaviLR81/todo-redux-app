@@ -1,0 +1,69 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+console.log("Welcome to Programiz!");
+
+
+const someArray = [
+{
+    nombre: 'javi', edad: 26
+},
+{
+    nombre: 'diana', edad: 17
+},
+{
+    nombre: 'liliana', edad: 32
+}
+]
+
+let someArrayClone = someArray.map( d => ({...d}) );
+var someArrayClone = JSON.parse(JSON.stringify(someArray));
+
+let addAfore = someArrayClone.map( data => {
+    if(data.edad > 83){
+        return {
+            ...data,
+            afore: true
+        }
+    }
+    return data;
+} )
+
+
+addAfore[0].nombre = 'Serafin';
+
+console.log("original", someArray);
+console.log(".");
+console.log(".");
+console.log("afore", addAfore);
+
+
+// Filter
+
+console.log("Welcome to Programiz!");
+
+
+const someArray = [
+{
+    nombre: 'javi', edad: 26
+},
+{
+    nombre: 'diana', edad: 17
+},
+{
+    nombre: 'liliana', edad: 32
+}
+]
+
+// let someArrayClone = someArray.map( d => ({...d}) );
+let someArrayClone = someArray;
+
+someArrayClone = someArrayClone.filter( data => data.edad > 20 );
+
+someArrayClone = someArrayClone.map( d => ({...d}) );
+someArrayClone[0].nombre = 'Java';
+
+console.log("original", someArray);
+console.log(".");
+console.log(".");
+console.log("afore", someArrayClone);
